@@ -1,4 +1,4 @@
-#define MAX 250
+#define MAX 500
 int led=13;
 int tm=MAX;
 int dir=0;
