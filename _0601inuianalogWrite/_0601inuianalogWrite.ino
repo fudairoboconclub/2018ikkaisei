@@ -1,6 +1,7 @@
 #define MAX 500
 int led=13;
 int tm=MAX;
+int dir=0;
 void setup() {
   pinMode(led,OUTPUT);
   // put your setup code here, to run once:
