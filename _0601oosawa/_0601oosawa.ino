@@ -1,7 +1,8 @@
+ #define MAX 500
  int led=13;
- int tm=250;
+ int tm=MAX;
  int dir=1;
- #define MAX 250
+
  void setup() {
   pinMode(led,OUTPUT);
   // put your setup code here, to run once:
@@ -10,12 +11,13 @@
 
 void loop() {
  
-  
   digitalWrite(led,HIGH);
   delay(tm); 
   digitalWrite(led,LOW);
   delay(tm);
  
+  
+  
   if(tm<=0)
     dir=0;
   if(tm>MAX)
