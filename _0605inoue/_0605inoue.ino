@@ -1,4 +1,5 @@
 int tm=100;
+int dir=0;
 
 void setup() {
   // put your setup code here, to run once:
@@ -12,8 +13,20 @@ void loop() {
   delay(tm);
   digitalWrite(10,LOW);
   delay(tm);
-  tm+=50;
-  if(tm>500){
-    tm=100;
+  
+  if(dir==0){
+    tm+=50;
+  
+    if(tm>500){
+      tm+=50;
+      dir=1;
     }
+  }
+  else{
+    tm-=50;
+    
+    if(tm<100){
+      dir=0;
+    } 
+  }
 }
