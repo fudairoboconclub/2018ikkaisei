@@ -8,7 +8,7 @@ void setup() {
 void loop() {
   int sw=0;
   sw=digitalRead(pin1);
-  if(sw==HIGH){
+  if(sw==LOW){
     digitalWrite(led,HIGH);
   }
   else{
