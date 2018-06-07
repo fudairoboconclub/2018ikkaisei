@@ -11,7 +11,7 @@ void setup() {
 void loop() {
   int sw=0;
  sw=digitalRead(swpin);
- if(sw==HIGH)
+ if(sw==LOW)
   digitalWrite(led,HIGH);
  else 
   digitalWrite(led,LOW);
