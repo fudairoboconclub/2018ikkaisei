@@ -15,7 +15,7 @@ int LightPhase(){
   analogWrite(led,powerA);
   Serial.println("powerA");
  } 
- else if(270<value&value<285){
+ else if(270<value&&value<285){
   analogWrite(led,powerB);
    Serial.println("powerB");
  }
