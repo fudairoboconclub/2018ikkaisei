@@ -5,65 +5,35 @@ int in4=7;
 int in5=6;
 int in6=5;
 
-int Mbreake1(){
+int Mbreake(){
   digitalWrite(in1,LOW);
   digitalWrite(in2,LOW);
   digitalWrite(in3,LOW);
   digitalWrite(in4,LOW);
   digitalWrite(in5,LOW);
   digitalWrite(in6,LOW);
-  delay(2000);
- }//モーターにブレーキ//
+  delay(1000);
+ }//ブレーキ//
 
- int M1move1(){
+ int Mmove1(){
   digitalWrite(in1,HIGH);
   digitalWrite(in2,LOW);
   digitalWrite(in3,LOW);
   digitalWrite(in4,HIGH);
   digitalWrite(in5,LOW);
   digitalWrite(in6,LOW);
-  delay(2000);
- }//モーター１を回す//
+  delay(3000);
+ }//後進//
 
- int M1move2(){
+ int Mmove2(){
   digitalWrite(in1,HIGH);
   digitalWrite(in2,LOW);
   digitalWrite(in3,HIGH);
   digitalWrite(in4,HIGH);
   digitalWrite(in5,LOW);
   digitalWrite(in6,HIGH);
-  delay(2000);
- }//モーター１を逆回転//
-
- int M2move1(){
-  digitalWrite(in1,LOW);
-  digitalWrite(in2,HIGH);
-  digitalWrite(in3,LOW);
-  digitalWrite(in4,LOW);
-  digitalWrite(in5,HIGH);
-  digitalWrite(in6,LOW); 
-  delay(2000);
- }//モーター２を回転//
-
- int M2move2(){
-  digitalWrite(in1,LOW);
-  digitalWrite(in2,HIGH);
-  digitalWrite(in3,HIGH);
-  digitalWrite(in4,LOW);
-  digitalWrite(in5,HIGH);
-  digitalWrite(in6,HIGH);
-  delay(2000);
- }//モーター２を逆回転//
-
- int Mbreake2(){
-  digitalWrite(in1,HIGH);
-  digitalWrite(in2,HIGH);
-  digitalWrite(in3,HIGH);
-  digitalWrite(in4,HIGH);
-  digitalWrite(in5,HIGH);
-  digitalWrite(in6,HIGH);
-  delay(2000);
- }//モーターにブレーキ//
+  delay(3000);
+ }//前進//
 
 
 
@@ -80,12 +50,9 @@ void setup() {
 
 void loop() {
  Mbreake1();
- M1move1();
- M1move2();
- M2move1();
- M2move2();
- Mbreake2();
- 
+ Mmove1();
+ Mmove2();
+
 
   
   // put your main code here, to run repeatedly:
