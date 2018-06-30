@@ -14,8 +14,18 @@ int Mbreake(){
   digitalWrite(in6,LOW);
   delay(1000);
  }//ブレーキ//
-
+ 
  int Mmove1(){
+  digitalWrite(in1,HIGH);
+  digitalWrite(in2,LOW);
+  digitalWrite(in3,HIGH);
+  digitalWrite(in4,HIGH);
+  digitalWrite(in5,LOW);
+  digitalWrite(in6,HIGH);
+  delay(3000);
+ }//前進//
+ 
+ int Mmove2(){
   digitalWrite(in1,HIGH);
   digitalWrite(in2,LOW);
   digitalWrite(in3,LOW);
@@ -25,15 +35,7 @@ int Mbreake(){
   delay(3000);
  }//後進//
 
- int Mmove2(){
-  digitalWrite(in1,HIGH);
-  digitalWrite(in2,LOW);
-  digitalWrite(in3,HIGH);
-  digitalWrite(in4,HIGH);
-  digitalWrite(in5,LOW);
-  digitalWrite(in6,HIGH);
-  delay(3000);
- }//前進//
+ 
 
 
 
@@ -49,7 +51,7 @@ void setup() {
 }
 
 void loop() {
- Mbreake1();
+ Mbreake();
  Mmove1();
  Mmove2();
 
